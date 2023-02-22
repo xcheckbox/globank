@@ -1,12 +1,13 @@
-
-import './App.css';
 import { AppRouter } from './routes';
+import { ContainerApp, Content } from './containers';
 
 function App() {
   return (
-    <div className="App">
-      <AppRouter />
-    </div>
+    <ContainerApp>
+      <Content>
+        <AppRouter />
+      </Content>
+    </ContainerApp>
   );
 }
 
