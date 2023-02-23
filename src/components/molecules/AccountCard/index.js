@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { StyledAccountCard, StyledAccountNumber, StyledBalance } from './index.styled';
-import { FaReceipt } from "react-icons/fa";
+import { CustomIcon } from 'components/atoms/Icon';
 
 export const AccountCard = ({
   title,
@@ -15,7 +15,7 @@ export const AccountCard = ({
     <>
       <Styler onClick={onClick}>
         <StyledAccountNumber>
-          {Icon && Icon}
+          <CustomIcon>{Icon}</CustomIcon>
           <span className='title'>{title}</span>
         </StyledAccountNumber>
         <StyledBalance>
