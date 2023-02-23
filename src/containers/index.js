@@ -30,4 +30,5 @@ export const Content = styled.main`
   flex-direction: column;
   flex: 1;
   background-color: #f1f1f1;
+  position: relative;
 `;

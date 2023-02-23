@@ -1,5 +1,6 @@
 import { AppRouter } from './routes';
 import { ContainerApp, Content } from './containers';
+import { Navbar } from 'shared/Navbar';
 
 function App() {
   return (
