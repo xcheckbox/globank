@@ -1,12 +1,14 @@
-
-import './App.css';
 import { AppRouter } from './routes';
+import { ContainerApp, Content } from './containers';
+import { Navbar } from 'shared/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <AppRouter />
-    </div>
+    <ContainerApp>
+      <Content>
+        <AppRouter />
+      </Content>
+    </ContainerApp>
   );
 }
 

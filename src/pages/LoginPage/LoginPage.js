@@ -1,13 +1,14 @@
 
 import React from 'react'
+import { Navbar } from 'shared/Navbar';
 import { Login } from '.';
+import { StyledLoginPage } from './index.styled';
 
 const LoginPage = () => {
   return (
-    <div>
-      <h1>Login Page</h1>
+    <StyledLoginPage>
       <Login />
-    </div>
+    </StyledLoginPage>
   )
 }
 
