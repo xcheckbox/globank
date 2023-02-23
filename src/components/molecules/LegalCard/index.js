@@ -1,0 +1,13 @@
+
+import { Button } from 'components/atoms/Button'
+import React from 'react'
+import { StyledLegalCard, Title } from './index.styled'
+
+export const LegalCard = ({ title }) => {
+  return (
+    <StyledLegalCard>
+      <Title>{title}</Title>
+      <Button text='Ver'></Button>
+    </StyledLegalCard>
+  )
+}
