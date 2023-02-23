@@ -9,4 +9,4 @@ export const AccountPage = () => {
   )
 }
 
-export default LegalPage;
+export default AccountPage;

@@ -8,6 +8,7 @@ const StyledAccountCard = styled(StyledCard)`
   padding: 20px;
   margin: 10px 0;
   border: 1px solid pink;
+  cursor: pointer;
 `;
 
 const StyledAccountNumber = styled.div`

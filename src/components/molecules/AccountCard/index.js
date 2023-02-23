@@ -6,21 +6,23 @@ import { FaReceipt } from "react-icons/fa";
 export const AccountCard = ({
   title,
   balance,
-  Icon = <FaReceipt />,
+  description,
+  Icon,
+  Styler = StyledAccountCard,
   onClick = () => { }
 }) => {
   return (
     <>
-      <StyledAccountCard onClick={onClick}>
+      <Styler onClick={onClick}>
         <StyledAccountNumber>
-          {Icon}
+          {Icon && Icon}
           <span className='title'>{title}</span>
         </StyledAccountNumber>
         <StyledBalance>
-          <span className='balance'>$88898</span>
-          <p className='description'>Total ahorrado</p>
+          <span className='balance'>{balance}</span>
+          {description && <p className='description'>Total ahorrado</p>}
         </StyledBalance>
-      </StyledAccountCard>
+      </Styler>
     </>
 
   )
