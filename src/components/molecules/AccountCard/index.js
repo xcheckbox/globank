@@ -3,10 +3,15 @@ import React from 'react'
 import { StyledAccountCard, StyledAccountNumber, StyledBalance } from './index.styled';
 import { FaReceipt } from "react-icons/fa";
 
-export const AccountCard = ({ title, balance, Icon = <FaReceipt /> }) => {
+export const AccountCard = ({
+  title,
+  balance,
+  Icon = <FaReceipt />,
+  onClick = () => { }
+}) => {
   return (
     <>
-      <StyledAccountCard>
+      <StyledAccountCard onClick={onClick}>
         <StyledAccountNumber>
           {Icon}
           <span className='title'>{title}</span>
