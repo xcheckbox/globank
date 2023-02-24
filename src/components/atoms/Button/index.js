@@ -10,15 +10,13 @@ export const Button = ({
   onClick = () => { },
 }) => {
   return (
-    <div>
-      <StyledButton
-        color={color}
-        disabled={disabled}
-        type={type}
-        onClick={onClick}
-      >
-        {children}
-      </StyledButton>
-    </div>
+    <StyledButton
+      color={color}
+      disabled={disabled}
+      type={type}
+      onClick={onClick}
+    >
+      {children}
+    </StyledButton>
   )
 }
