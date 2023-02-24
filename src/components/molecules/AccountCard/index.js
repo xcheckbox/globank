@@ -1,21 +1,30 @@
 
 import React from 'react'
 import { StyledAccountCard, StyledAccountNumber, StyledBalance } from './index.styled';
-import { FaReceipt } from "react-icons/fa";
+import { CustomIcon } from 'components/atoms/Icon';
+import { Amount } from 'components/atoms/Amount';
 
-export const AccountCard = ({ title, balance, Icon = <FaReceipt /> }) => {
+export const AccountCard = ({
+  title,
+  balance,
+  validateAmount = false,
+  description,
+  Icon,
+  Styler = StyledAccountCard,
+  onClick = () => { }
+}) => {
   return (
     <>
-      <StyledAccountCard>
+      <Styler onClick={onClick}>
         <StyledAccountNumber>
-          {Icon}
+          <CustomIcon>{Icon}</CustomIcon>
           <span className='title'>{title}</span>
         </StyledAccountNumber>
         <StyledBalance>
-          <span className='balance'>$88898</span>
-          <p className='description'>Total ahorrado</p>
+          <Amount validate={validateAmount} amount={balance} />
+          {description && <p className='description'>Total ahorrado</p>}
         </StyledBalance>
-      </StyledAccountCard>
+      </Styler>
     </>
 
   )
