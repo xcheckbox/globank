@@ -1,8 +1,10 @@
-
 import React from 'react'
 import { useNavigate } from 'react-router'
 import { Navbar } from 'shared/Navbar'
-import { StyledAboutPage } from './index.styled'
+import { StyledAboutPage } from './index.styled';
+import { Button } from 'components/atoms/Button';
+import { MdArrowBackIosNew as Return } from "react-icons/md";
+
 
 export const About = () => {
 
@@ -11,7 +13,7 @@ export const About = () => {
   return (
     <div>
       <Navbar>
-        <button onClick={() => navigator(-1)}>Regresar</button>
+        <Button onClick={() => navigator(-1)}><Return /></Button>
         <h2>About</h2>
       </Navbar>
 
