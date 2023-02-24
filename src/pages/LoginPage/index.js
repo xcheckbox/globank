@@ -1,19 +1,36 @@
 
-import React from 'react';
+import React, { useContext } from 'react';
+import { Button } from 'components/atoms/Button';
 import { LoginForm } from '../../components/molecules/LoginForm';
+import { StyledCreateAccount, AccountLink } from './index.styled';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from 'auth/authContext';
+import { types } from 'auth/authReducer';
 
 export const Login = () => {
+
+  const navigate = useNavigate();
+  const { dispatch } = useContext(AuthContext);
+
+  const handleLogin = () => {
+    dispatch({
+      type: types.login,
+      payload: { name: 'Sergio' }
+    })
+  }
+
   return (
     <>
       <h1>Globank</h1>
-      <LoginForm />
 
-      <div className='account-action'>
-        <p>Olvidaste la contraseña</p>
+      <LoginForm
+        onSubmit={handleLogin}
+      />
 
-        <button>Crear cuenta</button>
-        <p>Crear cuenta</p>
-      </div>
+      <StyledCreateAccount>
+        <Button color='secondary'>Crear cuenta</Button>
+        <AccountLink>Olvidaste la contraseña</AccountLink>
+      </StyledCreateAccount>
     </>
   )
 }
