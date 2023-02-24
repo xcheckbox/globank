@@ -16,7 +16,7 @@ export const Dashboard = () => {
     setIsOpenSidebar(!isOpenSidebar)
   }
 
-  const { isLoading, data } = useFetch(`${API_URL}/accounts`);
+  const { data } = useFetch(`${API_URL}/accounts`);
 
   return (
     <div>

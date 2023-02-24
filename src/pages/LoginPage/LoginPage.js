@@ -1,6 +1,5 @@
 
 import React from 'react'
-import { Navbar } from 'shared/Navbar';
 import { Login } from '.';
 import { StyledLoginPage } from './index.styled';
 

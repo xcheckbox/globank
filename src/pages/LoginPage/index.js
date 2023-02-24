@@ -3,13 +3,11 @@ import React, { useContext } from 'react';
 import { Button } from 'components/atoms/Button';
 import { LoginForm } from '../../components/molecules/LoginForm';
 import { StyledCreateAccount, AccountLink } from './index.styled';
-import { useNavigate } from 'react-router-dom';
 import { AuthContext } from 'auth/authContext';
 import { types } from 'auth/authReducer';
 
 export const Login = () => {
 
-  const navigate = useNavigate();
   const { dispatch } = useContext(AuthContext);
 
   const handleLogin = () => {
