@@ -2,9 +2,11 @@ import React from 'react'
 import { useForm } from '../../../hooks/useForm'
 import { Button } from '../../atoms/Button'
 import { Input } from '../../atoms/Input'
+import { StyledLoginForm, StyledFormControl } from './index.styled'
+
 
 export const LoginForm = ({
-  handleSubmit = () => { },
+  onSubmit = () => { },
   formTitle = 'Iniciar sesión'
 }) => {
 
@@ -14,29 +16,33 @@ export const LoginForm = ({
   })
 
   return (
-    <div>
+    <StyledLoginForm>
       <h3>{formTitle}</h3>
-      <form onSubmit={() => console.log('On Submit Event', formState)}>
+      <form>
 
-        <label>Usuario</label>
-        <Input
-          placeholder='Usuario'
-          name="username"
-          value={formState.username}
-          onChange={onInputChange}
-        />
+        <StyledFormControl>
+          <label>Usuario</label>
+          <Input
+            placeholder='Usuario'
+            name="username"
+            value={formState.username}
+            onChange={onInputChange}
+          />
+        </StyledFormControl>
 
-        <label>Contraseña</label>
-        <Input
-          placeholder='Contraseña'
-          name='password'
-          type='password'
-          value={formState.password}
-          onChange={onInputChange}
-        />
+        <StyledFormControl>
+          <label>Contraseña</label>
+          <Input
+            placeholder='Contraseña'
+            name='password'
+            type='password'
+            value={formState.password}
+            onChange={onInputChange}
+          />
+        </StyledFormControl>
 
-        <Button type='submit' text="Login" />
+        <Button color='secondary' onClick={onSubmit}>Ingresar</Button>
       </form>
-    </div>
+    </StyledLoginForm>
   )
 }
