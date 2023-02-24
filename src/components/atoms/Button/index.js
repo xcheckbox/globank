@@ -1,18 +1,24 @@
 
-import React from 'react'
+import React from 'react';
+import { StyledButton } from './index.styled';
 
 export const Button = ({
   type = 'button',
+  children,
+  color = 'primary',
+  disabled = false,
   onClick = () => { },
-  text = 'Click'
 }) => {
   return (
     <div>
-      <button
+      <StyledButton
+        color={color}
+        disabled={disabled}
         type={type}
+        onClick={onClick}
       >
-        {text}
-      </button>
+        {children}
+      </StyledButton>
     </div>
   )
 }

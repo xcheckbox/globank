@@ -10,6 +10,13 @@ const StyledAccountDetail = styled(StyledCard)`
   border-radius: 10px;
 `;
 
+const AccountActions = styled.div`
+  display: flex;
+  gap: 5px;
+  margin: 10px 0;
+`;
+
 export {
-  StyledAccountDetail
+  StyledAccountDetail,
+  AccountActions
 }

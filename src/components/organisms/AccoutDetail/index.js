@@ -26,10 +26,10 @@ export const AccountDetail = () => {
         { id: 5, label: 'ISR', value: '0.15% ($8.02)' },
       ],
       transactions: [
-        { id: 1, date: "2022-01-01", description: 'Product 1', amount: 5000.00 },
-        { id: 1, date: "2022-02-01", description: 'Product 2', amount: 5000.00 },
-        { id: 1, date: "2022-03-01", description: 'Product 3', amount: 5000.00 },
-        { id: 1, date: "2022-04-01", description: 'Product 4', amount: 5000.00 },
+        { id: 1, date: "2022-01-01", description: 'Product 1', amount: -5000.00 },
+        { id: 2, date: "2022-02-01", description: 'Product 2', amount: 5000.00 },
+        { id: 3, date: "2022-03-01", description: 'Product 3', amount: 5000.00 },
+        { id: 4, date: "2022-04-01", description: 'Product 4', amount: 5000.00 },
       ]
     }
   }
@@ -55,6 +55,7 @@ export const AccountDetail = () => {
             key={id}
             title={description}
             balance={amount}
+            validateAmount
             Icon={<RiMoneyDollarCircleLine />}
           />
         ))

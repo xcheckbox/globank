@@ -2,10 +2,12 @@
 import React from 'react'
 import { StyledAccountCard, StyledAccountNumber, StyledBalance } from './index.styled';
 import { CustomIcon } from 'components/atoms/Icon';
+import { Amount } from 'components/atoms/Amount';
 
 export const AccountCard = ({
   title,
   balance,
+  validateAmount = false,
   description,
   Icon,
   Styler = StyledAccountCard,
@@ -19,7 +21,7 @@ export const AccountCard = ({
           <span className='title'>{title}</span>
         </StyledAccountNumber>
         <StyledBalance>
-          <span className='balance'>{balance}</span>
+          <Amount validate={validateAmount} amount={balance} />
           {description && <p className='description'>Total ahorrado</p>}
         </StyledBalance>
       </Styler>

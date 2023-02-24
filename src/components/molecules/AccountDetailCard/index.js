@@ -1,7 +1,7 @@
 import { Button } from 'components/atoms/Button'
 import React from 'react'
 import { AccountCard } from '../AccountCard'
-import { StyledAccountDetail } from './index.styled'
+import { StyledAccountDetail, AccountActions } from './index.styled'
 
 export const AccountDetailCard = () => {
   return (
@@ -11,9 +11,10 @@ export const AccountDetailCard = () => {
         balance={'$49449'}
       />
 
-      <div className='account-action'>
-        <Button text='Actualizar' />
-      </div>
+      <AccountActions>
+        <Button>Actualizar</Button>
+        <Button color='secondary'>Pagar</Button>
+      </AccountActions>
 
       <div className='account-number'>
         53646-74747-747484-4444
