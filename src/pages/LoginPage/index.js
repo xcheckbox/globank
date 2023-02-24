@@ -1,7 +1,7 @@
 
 import React, { useContext } from 'react';
 import { Button } from 'components/atoms/Button';
-import { LoginForm } from '../../components/molecules/LoginForm';
+import { LoginForm } from '../../components/organisms/LoginForm';
 import { StyledCreateAccount, AccountLink } from './index.styled';
 import { AuthContext } from 'auth/authContext';
 import { types } from 'auth/authReducer';
