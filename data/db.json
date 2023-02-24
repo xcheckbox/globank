@@ -1,0 +1,80 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "user": "Sergio PG",
+      "email": "sergio@gmail.com"
+    }
+  ],
+  "accounts": [
+    {
+      "id": 1,
+      "type": "checking_account",
+      "balance": 4661.59,
+      "label": "Tarjeta de crédito",
+      "description": "Deuda actual",
+      "actions": [
+        { "id": "1", "type": "update_account", "label": "Actualizar" }
+      ],
+      "account_detail": [
+        { "id": 1, "label": "Monto al vencimiento", "value": "$2555,555" },
+        { "id": 2, "label": "Plazo en días", "value": "7" },
+        { "id": 3, "label": "Interes neto", "value": "9.85% ($400.33)" },
+        { "id": 4, "label": "Interes bruto", "value": "10% ($420.33)" },
+        { "id": 5, "label": "ISR", "value": "0.15% ($8.02)" }
+      ],
+      "transactions": [
+        { "id": 1, "date": "2022-01-01", "description": "Product 1", "amount": -5000.00 },
+        { "id": 2, "date": "2022-02-01", "description": "Product 2", "amount": 5000.00 },
+        { "id": 3, "date": "2022-03-01", "description": "Product 3", "amount": 5000.00 },
+        { "id": 4, "date": "2022-04-01", "description": "Product 4", "amount": 5000.00 }
+      ]
+    },
+    {
+      "id": 1,
+      "type": "saving_account",
+      "balance": 10000,
+      "label": "Mis ahorros",
+      "description": "Total ahorrado",
+      "actions": [
+        { "id": "1", "type": "update_account", "label": "Actualizar" }
+      ],
+      "account_detail": [
+        { "id": 1, "label": "Monto al vencimiento", "value": "$2555,555" },
+        { "id": 2, "label": "Plazo en días", "value": "7" },
+        { "id": 3, "label": "Interes neto", "value": "9.85% ($400.33)" },
+        { "id": 4, "label": "Interes bruto", "value": "10% ($420.33)" },
+        { "id": 5, "label": "ISR", "value": "0.15% ($8.02)" }
+      ],
+      "transactions": [
+        { "id": 1, "date": "2022-01-01", "description": "Product 1", "amount": -5000 },
+        { "id": 2, "date": "2022-02-01", "description": "Product 2", "amount": 5000 },
+        { "id": 3, "date": "2022-03-01", "description": "Product 3", "amount": 5000 },
+        { "id": 4, "date": "2022-04-01", "description": "Product 4", "amount": 5000 }
+      ]
+    },
+    {
+      "id": 1,
+      "type": "investment_account",
+      "balance": 56645,
+      "label": "Inversión Hey Globank",
+      "description": "Mi inversión",
+      "actions": [
+        { "id": "1", "type": "update_account", "label": "Actualizar" }
+      ],
+      "account_detail": [
+        { "id": 1, "label": "Monto al vencimiento", "value": "$2555,555" },
+        { "id": 2, "label": "Plazo en días", "value": "7" },
+        { "id": 3, "label": "Interes neto", "value": "9.85% ($400.33)" },
+        { "id": 4, "label": "Interes bruto", "value": "10% ($420.33)" },
+        { "id": 5, "label": "ISR", "value": "0.15% ($8.02)" }
+      ],
+      "transactions": [
+        { "id": 1, "date": "2022-01-01", "description": "Product 1", "amount": -5000.00 },
+        { "id": 2, "date": "2022-02-01", "description": "Product 2", "amount": 5000.00 },
+        { "id": 3, "date": "2022-03-01", "description": "Product 3", "amount": 5000.00 },
+        { "id": 4, "date": "2022-04-01", "description": "Product 4", "amount": 5000.00 }
+      ]
+    }
+  ]
+}

@@ -7,7 +7,6 @@ const StyledAccountCard = styled(StyledCard)`
   align-items: center;
   padding: 20px;
   margin: 10px 0;
-  border: 1px solid pink;
   cursor: pointer;
 `;
 
