@@ -12,6 +12,7 @@ const StyledAccountDetail = styled(StyledCard)`
 
 const AccountActions = styled.div`
   display: flex;
+  justify-content: space-evenly;
   gap: 5px;
   margin: 10px 0;
 `;

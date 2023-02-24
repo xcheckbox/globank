@@ -1,13 +1,19 @@
 
 import { AccountDetail } from 'components/organisms/AccoutDetail'
 import { Contracts } from 'components/organisms/Contracts'
+import { useFetch } from 'hooks/useFetch'
 import React from 'react'
-import { useNavigate } from 'react-router'
+import { useNavigate, useParams } from 'react-router'
 import { Navbar } from 'shared/Navbar'
 
 export const Account = () => {
+  const API_URL = process.env.REACT_APP_API_URL;
 
   const navigator = useNavigate();
+  const { id } = useParams();
+  const { data, isLoading } = useFetch(`${API_URL}/accounts/${id}`);
+
+  if (isLoading) return;
 
   return (
     <div>
@@ -16,7 +22,7 @@ export const Account = () => {
         <h2>Account Detail</h2>
       </Navbar>
 
-      <AccountDetail />
+      <AccountDetail detail={data} />
     </div>
   )
 }

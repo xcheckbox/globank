@@ -7,7 +7,7 @@ export const LegalCard = ({ title }) => {
   return (
     <StyledLegalCard>
       <Title>{title}</Title>
-      <Button text='Ver'></Button>
+      <Button color="secondary">Ver</Button>
     </StyledLegalCard>
   )
 }

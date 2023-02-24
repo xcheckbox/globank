@@ -7,8 +7,7 @@ const StyledLegalCard = styled(StyledCard)`
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  margin: 10px 0;
-  border: 1px solid pink;
+  margin: 10px 1px;
 `;
 
 const Title = styled.h4`

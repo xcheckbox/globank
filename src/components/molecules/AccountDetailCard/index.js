@@ -3,21 +3,22 @@ import React from 'react'
 import { AccountCard } from '../AccountCard'
 import { StyledAccountDetail, AccountActions } from './index.styled'
 
-export const AccountDetailCard = () => {
+export const AccountDetailCard = ({ title, balance, actions, numberAccount = '' }) => {
   return (
     <StyledAccountDetail>
       <AccountCard
-        title={'Mi inversión'}
-        balance={'$49449'}
+        title={title}
+        balance={balance}
       />
 
       <AccountActions>
-        <Button>Actualizar</Button>
-        <Button color='secondary'>Pagar</Button>
+        {
+          actions?.map(({ label, id }) => <Button key={id}>{label}</Button>)
+        }
       </AccountActions>
 
       <div className='account-number'>
-        53646-74747-747484-4444
+        1234-5678-0000-0000
       </div>
     </StyledAccountDetail>
   )

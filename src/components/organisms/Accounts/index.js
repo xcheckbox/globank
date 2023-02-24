@@ -3,7 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AccountCard } from 'components/molecules/AccountCard';
 import { formatCurrency } from 'utils/formatCurrency';
-import { MdOutlineSavings, MdCreditCard, MdMoney, MdOutlineMonetizationOn } from "react-icons/md";
+import { MdOutlineSavings, MdCreditCard, MdMoney } from "react-icons/md";
 import { StyledAccounts } from './index.styled';
 
 export const Accounts = ({ accounts }) => {
@@ -25,7 +25,7 @@ export const Accounts = ({ accounts }) => {
       {
         accounts?.map((account) => {
 
-          const { type, balance, label, description } = account;
+          const { id, type, balance, label, description } = account;
 
           return (
             <AccountCard
@@ -34,7 +34,7 @@ export const Accounts = ({ accounts }) => {
               balance={formatCurrency(balance)}
               description={description}
               Icon={mapperIcon[type]}
-              onClick={() => handleNavigate('credit')}
+              onClick={() => handleNavigate(id)}
             />
           )
         })

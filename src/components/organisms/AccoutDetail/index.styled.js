@@ -15,12 +15,30 @@ const StyledAccountCard = styled(StyledCard)`
     font-weight: normal;
   }
 
-  .balance {
-    font-size: .8em;
+  span {
+    font-size: .9em;
     font-weight: 500;
   }
 `;
 
+const StyledTransactionCard = styled(StyledCard)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 1px;
+
+  .title {
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  .description {
+    text-align: right;
+  }
+`;
+
 export {
-  StyledAccountCard
+  StyledAccountCard,
+  StyledTransactionCard
 }

@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { LegalCard } from 'components/molecules/LegalCard'
 
 export const Contracts = () => {
