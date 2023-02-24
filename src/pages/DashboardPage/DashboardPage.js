@@ -4,7 +4,7 @@ import { Dashboard } from '.'
 
 const DashboardPage = () => {
   return (
-    <div style={{ backgroundColor: 'red' }}>
+    <div>
       <div className='dashboard-container'>
         <Dashboard />
       </div>

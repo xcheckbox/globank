@@ -8,7 +8,7 @@ const COLOR = {
   `,
   secondary: css`
   color: #000;
-  border: 2px solid ${GlobalStyles.color.blue_medium};
+  border: 2px solid ${GlobalStyles.color.blue_light};
   background-color: white;
 `,
 };

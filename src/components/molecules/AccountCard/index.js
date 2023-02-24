@@ -22,7 +22,7 @@ export const AccountCard = ({
         </StyledAccountNumber>
         <StyledBalance>
           <Amount validate={validateAmount} amount={balance} />
-          {description && <p className='description'>Total ahorrado</p>}
+          {description && <p className='description'>{description}</p>}
         </StyledBalance>
       </Styler>
     </>

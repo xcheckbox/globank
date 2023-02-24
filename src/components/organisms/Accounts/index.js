@@ -1,9 +1,12 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AccountCard } from 'components/molecules/AccountCard';
+import { formatCurrency } from 'utils/formatCurrency';
+import { MdOutlineSavings, MdCreditCard, MdMoney } from "react-icons/md";
+import { StyledAccounts } from './index.styled';
 
-export const Accounts = () => {
+export const Accounts = ({ accounts }) => {
 
   const navigate = useNavigate();
 
@@ -11,25 +14,31 @@ export const Accounts = () => {
     navigate(`/account/${id}`)
   }
 
+  const mapperIcon = {
+    'checking_account': <MdCreditCard />,
+    'saving_account': <MdOutlineSavings />,
+    'investment_account': <MdMoney />,
+  }
+
   return (
-    <div>
-      <AccountCard
-        title={'Tarjeta de credito'}
-        balance={'64474'}
-        onClick={() => handleNavigate('credit')}
-      />
+    <StyledAccounts>
+      {
+        accounts?.map((account) => {
 
-      <AccountCard
-        title={'Mis ahorros'}
-        balance={'665656'}
-        onClick={() => handleNavigate('saving')}
-      />
+          const { id, type, balance, label, description } = account;
 
-      <AccountCard
-        title={'Inversión'}
-        balance={'64474'}
-        onClick={() => handleNavigate('investment')}
-      />
-    </div>
+          return (
+            <AccountCard
+              key={type}
+              title={label}
+              balance={formatCurrency(balance)}
+              description={description}
+              Icon={mapperIcon[type]}
+              onClick={() => handleNavigate(id)}
+            />
+          )
+        })
+      }
+    </StyledAccounts>
   )
 }

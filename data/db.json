@@ -1,0 +1,77 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "user": "Sergio PG",
+      "email": "sergio@gmail.com"
+    }
+  ],
+  "accounts": [
+    {
+      "id": 1,
+      "type": "checking_account",
+      "balance": 4661.59,
+      "label": "Tarjeta de crédito",
+      "description": "Deuda actual",
+      "actions": [
+        { "id": "1", "type": "pay_account", "label": "Pagar" },
+        { "id": "2", "type": "virtual_account", "label": "Virtual" },
+        { "id": "3", "type": "cvv_account", "label": "CVV" }
+      ],
+      "account_detail": [
+        { "id": 1, "label": "Crédito disponible", "value": 8343.61 },
+        { "id": 2, "label": "Saldo al corte", "value": 6890.34 },
+        { "id": 3, "label": "Deuda actual", "value": 15456.38 }
+      ],
+      "transactions": [
+        { "id": 1, "date": "2022-01-01", "description": "Amazon mx Marketplace", "amount": -300 },
+        { "id": 2, "date": "2022-02-01", "description": "Super Plaza Ana", "amount": -500 },
+        { "id": 3, "date": "2022-03-01", "description": "VS TELCEL 00011112222", "amount": -1150 },
+        { "id": 4, "date": "2022-03-01", "description": "Reembolso tienda 1", "amount": 1000 },
+        { "id": 5, "date": "2022-04-01", "description": "Viteri Boxing TC 19", "amount": -999.98 },
+        { "id": 6, "date": "2022-04-01", "description": "Flexi amado nervo 1", "amount": -1499 }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "saving_account",
+      "balance": 10000,
+      "label": "Mis ahorros",
+      "description": "Total ahorrado",
+      "actions": [
+        { "id": "1", "type": "update_saving", "label": "Editar" },
+        { "id": "2", "type": "pause_saving", "label": "Detener" },
+        { "id": "3", "type": "finish_saving", "label": "Terminar" }
+      ],
+      "account_detail": [
+        { "id": 1, "label": "Meta de ahorro", "value": 15000 },
+        { "id": 2, "label": "Rendimiento generado", "value": 200.87 },
+        { "id": 3, "label": "Faltante", "value": 9000 },
+        { "id": 4, "label": "Proximo abono automático", "value": "01/Mar/2023" }
+      ],
+      "transactions": [
+        { "id": 1, "date": "2022-01-01", "description": "(NB) Recepción de cuenta 1111000022222 SERGIO P", "amount": 5000 },
+        { "id": 2, "date": "2022-02-01", "description": "(OL) Traspaso a cuenta 000011112222", "amount": -2000 },
+        { "id": 3, "date": "2022-02-01", "description": "(OL) Traspaso a cuenta 000011112222", "amount": -500 }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "investment_account",
+      "balance": 56645,
+      "label": "Inversión Hey Globank",
+      "description": "Mi inversión",
+      "actions": [
+        { "id": "1", "type": "update_account", "label": "Actualizar" }
+      ],
+      "account_detail": [
+        { "id": 1, "label": "Monto al vencimiento", "value": 50344.98 },
+        { "id": 2, "label": "Plazo en días", "value": "7" },
+        { "id": 3, "label": "Interés neto", "value": "9.85% ($200.34)" },
+        { "id": 4, "label": "Interés bruto", "value": "10.0% ($230.12)" },
+        { "id": 5, "label": "ISR", "value": "0.15% ($4.02)" }
+      ],
+      "transactions": []
+    }
+  ]
+}
