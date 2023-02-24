@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useForm } from '../../../hooks/useForm'
 import { Button } from '../../atoms/Button'
 import { Input } from '../../atoms/Input'
@@ -14,6 +14,14 @@ export const LoginForm = ({
     username: '',
     password: ''
   })
+
+  const [disabled, setDisabled] = useState(true);
+
+  useEffect(() => {
+    if (formState.username && formState.password) {
+      setDisabled(false);
+    }
+  }, [formState])
 
   return (
     <StyledLoginForm>
@@ -41,7 +49,13 @@ export const LoginForm = ({
           />
         </StyledFormControl>
 
-        <Button color='secondary' onClick={onSubmit}>Ingresar</Button>
+        <Button
+          color='secondary'
+          onClick={onSubmit}
+          disabled={disabled}
+        >
+          Ingresar
+        </Button>
       </form>
     </StyledLoginForm>
   )

@@ -13,6 +13,12 @@ const COLOR = {
 `,
 };
 
+const DISABLED = css`
+  cursor: not-allowed;
+  background: #d3d3d3;
+  color: #f5f5f5;
+`;
+
 export const StyledButton = styled.button`
   cursor: pointer;
   border: none;
@@ -23,4 +29,5 @@ export const StyledButton = styled.button`
   outline: none;
 
   ${({ color }) => color && COLOR[color]}
+  ${({ disabled }) => disabled && DISABLED}
 `;
